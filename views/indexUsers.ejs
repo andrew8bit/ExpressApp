@@ -1,0 +1,16 @@
+<form action='/users/' method='POST'>
+    <div class="mb-3">
+        <label for="name" class="form-s">Username</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name='name'>
+        <button type="submit" class="btn btn-primary">Join the world</button>
+</form>
+<h1 class='text-center'>Ghiblers</h1>
+<ul class='list-group'>
+    <% allUsers.forEach( user => { %>
+        <li class='list-group-item'>
+            <a href='/users/<%=user.id%>/'>
+            <%= user.name %>
+            </a>
+        </li>
+   <% }) %>
+</ul>
